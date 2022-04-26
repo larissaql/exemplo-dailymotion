@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "title";
+    src: url(../fonts/Raleway-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+    font-family: "regular";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+:root{
+    --bg-color: #1d3b29;
+    --btn-color: antiquewhite;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+
+}
+
+#app {
+    width: 70%;
+    margin: auto;
+}
+
+#loading{
+    display: none;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    
+  }
+
+#search-form {
+    text-align: center;
+    margin: 50px;
+}
+
+#search-form input {
+    width: 400px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    text-align: center;
+    margin-right: 10px;
+    font-family: "regular";
+    font-size: 100%;
+}
+
+#search-form button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: var(--btn-color);
+    color: #1d223b;
+    font-family: "title";
+    font-size: 100%;
+}
+
+#result-area {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tv-card {
+    width: 33%;
+    margin-bottom: 20px;
+}
+
+.tv-card h3 {
+    font-family: "title";
+    color: antiquewhite;
+}
+
+.show-banner img{
+    border-radius: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#show-container {
+    display: flex;
+    background-color: #b7c1f0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 50px auto;
+}
+
+#image-container {
+    width: 50%;
+    text-align: center;
+    background-color: var(--bg-color);
+    padding: 18px 0;
+    border-radius: 10px;
+}
+
+#image-container img {
+    width: 90%;
+}
+
+#details-container {
+    width: 50%;
+    font-family: 'regular';
+    padding: 0 20px;
+    position: relative;
+}
+
+.detail-title {
+    font-family: 'title';
+}
+
+@media screen and (max-width: 600px) {
+    #app {
+        width: 100%;
+    }
+
+    #search-form input,
+    #search-form button {
+        display: block;
+        margin: auto;
+    }
+    #search-form input {
+        width: 300px;
+        margin-bottom: 20px;
+
+    }
+    .tv-card {
+        width: 100%;
+
+    }
+
+    .show-banner img {
+        width: 100%;
+    }
+
+    #image-container {
+        width: 100%;
+        text-align: center;
+        background-color: var(--bg-color);
+        padding: 18px 0;
+        border-radius: 10px;
+    }
+    
+    #image-container img {
+        width: 95%;   
+    }
+    
+    #details-container {
+        position: absolute;
+        top: 70%;
+        text-align: center;
+        background-color: #b7c1f0;
+        border-radius: 10px;
+        
+    }
+    
+}
+
