@@ -1,1 +1,1 @@
-export const API_URL = 'https://api.dailymotion.com/videos'
+export const API_URL = 'https://api.dailymotion.com'

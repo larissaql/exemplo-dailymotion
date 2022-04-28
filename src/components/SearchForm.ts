@@ -10,7 +10,7 @@ const http =axios.create({
     baseURL: API_URL
 })
 
-export const renderSearchForm = (container: HTMLElement) => {
+ const renderSearchForm = (container: HTMLElement) => {
 
     const htmlContent = `
     <form id="search-form">
@@ -19,32 +19,29 @@ export const renderSearchForm = (container: HTMLElement) => {
     </form>
     `
     container.innerHTML = htmlContent
-}
 
 
-export const searchVideos = async () => {
-    const params = new URLSearchParams(document.location.search)
-    const filter = params.get('filter')
+
+ const searchVideos = async () => {
+    const url = new URL(window.location.href)
+    const filter = url.searchParams.get('filter')
     
     if(filter) {
         const response = await http.get('/videos', { params: {search: filter},})
-        console.log(response)
         
         if(response.status == 200) {
             const {data} = response
-            const {list} = data
-
-            console.log(list)
-
             const resultArea = <HTMLDivElement>$('#result-area')
             resultArea.innerHTML = ''
-            list.forEach((jsonObj: any) => {
-            
-                const webVideo = getDaily(jsonObj)
-                renderVideosCard(webVideo, resultArea)
+
+            data.list.forEach((jsonObj: any) => {
+                const daily = getDaily(jsonObj)
+                renderVideosCard(daily, resultArea)
+                
             })
+            }
         }
     }
-}
 searchVideos()
+}
 export default renderSearchForm

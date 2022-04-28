@@ -7,7 +7,7 @@ import './style.css'
 
 const $ = document.querySelector.bind(document)
 
-const searchVideos = async (id:string) => {
+const searchVideos = async (id: string) => {
     const http = axios.create({
         baseURL: API_URL,
     })
@@ -16,10 +16,10 @@ const searchVideos = async (id:string) => {
 
     if(response.status == 200){
         const { data } = response
-        const webVideo = getDaily(data)
-
+        const video = getDaily(data)
         const app = <HTMLDivElement>$('#app')
-        renderVideoSelecionado(webVideo, app)
+
+        renderVideoSelecionado(video, app)
     }
 }
 

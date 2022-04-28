@@ -2,14 +2,17 @@
     font-family: "title";
     src: url(../fonts/Raleway-ExtraBoldItalic.ttf);
 }
-
+@font-face {
+    font-family: "btn";
+    src: url(../fonts/RobotoCondensed-BoldItalic.ttf);
+}
 @font-face {
     font-family: "regular";
     src: url(../fonts/Raleway-Regular.ttf);
 }
 
 :root{
-    --bg-color: #1d3b29;
+    --bg-color: #5c7766;
     --btn-color: antiquewhite;
 }
 
@@ -18,6 +21,7 @@ body {
     background-color: var(--bg-color);
 
 }
+
 
 #app {
     width: 70%;
@@ -41,8 +45,8 @@ body {
 #search-form input {
     width: 400px;
     height: 30px;
-    border: 2px solid #ccc;
-    border-radius: 15px;
+    border: 4px solid #ccc;
+    border-radius: 10px;
     text-align: center;
     margin-right: 10px;
     font-family: "regular";
@@ -54,13 +58,13 @@ body {
     border-radius: 10px;
     padding: 10px 20px;
     color: var(--btn-color);
-    color: #1d223b;
-    font-family: "title";
+    color: var(--bg-color);
+    font-family: "btn";
     font-size: 100%;
 }
 
 #result-area {
-    width: 80%;
+    width: 100%;
     margin: 50px auto;
     display: flex;
     flex-wrap: wrap;
@@ -69,23 +73,25 @@ body {
 
 .tv-card {
     width: 33%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .tv-card h3 {
-    font-family: "title";
-    color: antiquewhite;
+    font-family: "regular";
+    color: #ccc;
 }
 
 .show-banner img{
-    border-radius: 15px;
+    width: 70%;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 a {
     text-decoration: none;
 }
 
-#show-container {
+#show-app {
     display: flex;
     background-color: #b7c1f0;
     padding: 20px;
@@ -94,7 +100,7 @@ a {
     margin: 50px auto;
 }
 
-#image-container {
+#image-app {
     width: 50%;
     text-align: center;
     background-color: var(--bg-color);
@@ -102,11 +108,11 @@ a {
     border-radius: 10px;
 }
 
-#image-container img {
+#image-app img {
     width: 90%;
 }
 
-#details-container {
+#details-app {
     width: 50%;
     font-family: 'regular';
     padding: 0 20px;
@@ -141,19 +147,19 @@ a {
         width: 100%;
     }
 
-    #image-container {
-        width: 100%;
+    #image-app {
+        width: 50%;
         text-align: center;
         background-color: var(--bg-color);
         padding: 18px 0;
         border-radius: 10px;
     }
     
-    #image-container img {
+    #image-app img {
         width: 95%;   
     }
     
-    #details-container {
+    #details-app {
         position: absolute;
         top: 70%;
         text-align: center;
