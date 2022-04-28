@@ -25,6 +25,7 @@ const searchVideos = async (id: string) => {
 
 const params = new URLSearchParams(document.location.search)
 const id = params.get('id')
+
 if(id){
     searchVideos(id)
 }
